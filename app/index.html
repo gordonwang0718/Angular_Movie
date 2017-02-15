@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="app">
 <head>
 	<title>Movie</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://use.fontawesome.com/4971513484.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 
-<body>
-	<h1>Movie</h1>
-	<input ng-model="test"> {{test}}
+<body ng-controller="MainCtrl">
+	<div class="container">
+		{{context}}
+<!-- 		<div class="leftColumn">
+			<header class="text1">BROWSE MOVIES</header>
+			<hr>
+			<container>
+				<div ng-repeat="movie in MovieList.childNodes" class="thumb">
+					<img src="{{movie.imgSrc}}" ng-click="chooseMovie(movie.id)">
+					<caption>
+						<div class="text2">{{movie.title}}</div>
+						<div>{{movie.director}}</div>
+					</caption>
+				</div>
+			</container>
+		</div> -->
+	</div>
+
+	<!-- Libaries -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.6/angular-resource.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+
+	<!-- Controllers -->
+	<script src="../app.js"></script>
+	<script src="../scripts/controller/MainCtrl.controller.js"></script>
 </body>
 </html>
