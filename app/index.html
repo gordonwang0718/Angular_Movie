@@ -8,20 +8,21 @@
 
 <body ng-controller="MainCtrl">
 	<div class="container">
-		{{context}}
-<!-- 		<div class="leftColumn">
+		<div class="leftColumn">
 			<header class="text1">BROWSE MOVIES</header>
 			<hr>
 			<container>
 				<div ng-repeat="movie in MovieList.childNodes" class="thumb">
-					<img src="{{movie.imgSrc}}" ng-click="chooseMovie(movie.id)">
+					<!-- <img src="{{movie.imgSrc}}" ng-click="chooseMovie(movie.id)"> -->
 					<caption>
 						<div class="text2">{{movie.title}}</div>
 						<div>{{movie.director}}</div>
 					</caption>
 				</div>
 			</container>
-		</div> -->
+		</div>
+		<!-- Using directive -->
+		<movie-show class="rightColumn" movie-id="movieId"></movie-show>
 	</div>
 
 	<!-- Libaries -->
@@ -32,5 +33,9 @@
 	<!-- Controllers -->
 	<script src="../app.js"></script>
 	<script src="../scripts/controller/MainCtrl.controller.js"></script>
+	<script src="../scripts/controller/MovieShowCtrl.controller.js"></script>
+
+	<!-- Directive -->
+	<script src="../scripts/directives/movieShow.directive.js"></script>
 </body>
 </html>
