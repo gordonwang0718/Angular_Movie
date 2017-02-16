@@ -1,1 +1,40 @@
-<div>Test</div>
+<div class="movieDetail">
+	<div class="topSection">
+		<header class="texth1">{{currentMovie.title}}</header>
+		<hr>
+		<div>
+			<div class="poster"><img ng-src="{{currentMovie.imgSrc}}"></div>
+			<div class="content">
+				<div>
+					<div class="texth2">WHO MADE IT?</div>
+					<div><span>Director: </span>{{currentMovie.director}}</div>
+					<div><span>Writers: </span> <span ng-repeat="writer in currentMovie.writers">{{writer.name}}</span></div>
+					<div><span>Stars: </span> <span ng-repeat="star in currentMovie.cast | limitTo: 5 | orderBy: star.order ">{{star.name}}</span></div>
+				</div>
+				<div>
+					<div class="texth2">WHAT'S IT ABOUT?</div>
+					<div>{{currentMovie.overview}}</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+
+	<div class="bottomSection">
+		<header class="texth1">MOVIE CREDITS</header>
+		<hr>
+		<div class="credits">
+			<div>
+				<div ng-repeat="star in currentMovie.cast | limitTo: 6 | orderBy: star.order" class="thumb">
+					<div><img ng-src="http://image.tmdb.org/t/p/w342/{{star.profile_path}}" class="icon" ng-click="chooseProfile(star.profile_path)"></div>
+					<div>
+						<div class="texth2">{{star.name}}</div>
+						<div>{{star.character}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="bigImage">
+				<img ng-src="http://image.tmdb.org/t/p/w342/{{currentProfile}}" class="bigIcon">
+			</div>
+		</div>
+	</div>
+</div>

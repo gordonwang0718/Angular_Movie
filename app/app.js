@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('app', [
-		// 'ngResource',
-		// 'Services',
+		'ngResource',
+		'Services',
 		'Controllers',
 		'Directives'
 	]);

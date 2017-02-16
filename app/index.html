@@ -7,22 +7,24 @@
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 
 <body ng-controller="MainCtrl">
+	<div class="header"></div>
 	<div class="container">
-		<div class="leftColumn">
-			<header class="text1">BROWSE MOVIES</header>
+		<div class="leftcolumn">
+			<header class="texth1">BROWSE MOVIES</header>
 			<hr>
 			<container>
 				<div ng-repeat="movie in MovieList.childNodes" class="thumb">
-					<!-- <img src="{{movie.imgSrc}}" ng-click="chooseMovie(movie.id)"> -->
+					<img src="{{movie.imgSrc}}" ng-click="chooseMovie(movie.id)">
 					<caption>
-						<div class="text2">{{movie.title}}</div>
+						<div class="texth2">{{movie.title}}</div>
 						<div>{{movie.director}}</div>
 					</caption>
 				</div>
 			</container>
 		</div>
+
 		<!-- Using directive -->
-		<movie-show class="rightColumn" movie-id="movieId"></movie-show>
+		<movie-show class="rightcolumn" movie-id="movieId"></movie-show>
 	</div>
 
 	<!-- Libaries -->
@@ -31,11 +33,15 @@
 	<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
 
 	<!-- Controllers -->
-	<script src="../app.js"></script>
-	<script src="../scripts/controller/MainCtrl.controller.js"></script>
-	<script src="../scripts/controller/MovieShowCtrl.controller.js"></script>
+	<script src="app.js"></script>
+	<script src="scripts/controller/MainCtrl.controller.js"></script>
+	<script src="scripts/controller/MovieShowCtrl.controller.js"></script>
 
 	<!-- Directive -->
-	<script src="../scripts/directives/movieShow.directive.js"></script>
+	<script src="scripts/directives/movieShow.directive.js"></script>
+
+	<!-- Services -->
+	<script src="scripts/services/ApiService.factory.js"></script>
+	<script src="scripts/services/MovieList.factory.js"></script>
 </body>
 </html>

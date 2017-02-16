@@ -1,3 +1,171 @@
 body {
-	/*color: red;*/
+	width: 100%;
+	font-family: Helvetica;
+	font-size: 14px;
+	color: #484949;
+	line-height: 18px;
+}
+
+hr {
+	margin: 10px 0;
+}
+
+.texth1 {
+	font-size: 24px;
+	color: #1A9DBA;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.texth2 {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.header {
+	background: #383838;
+	height: 40px;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+}
+
+.container .leftcolumn {
+	flex: 1;
+	padding: 50px;
+	background: #F7F7F7;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .leftcolumn img {
+	width: 122px;
+	height: 122px;
+	border: 9px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 20px;
+}
+
+.container .leftcolumn img:hover{
+	box-shadow: 0 0 0 9px #1A9DBA;
+	cursor: pointer;
+}
+
+.container .leftcolumn header{
+	margin-bottom: 0;
+}
+
+.container .leftcolumn container{
+	padding-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container .leftcolumn container div{
+	width: 50%;
+	min-width: 100px;
+}
+
+.container .leftcolumn .thumb{
+	margin: 30px 0;
+	text-align: center;
+}
+
+.container .leftcolumn .thumb:hover {
+	color: #1A9DBA;
+}
+
+.container .leftcolumn .thumb div{
+	width: 100%;
+	text-align: center;
+}
+
+.container .rightcolumn {
+	flex: 2;
+	padding: 50px;
+}
+
+
+.movieDetail .topSection header~div {
+	display: flex;
+}
+
+.movieDetail .topSection .poster img{
+	margin: 30px 0;
+	width: 174px;
+	height: 262px;
+	object-fit: cover;
+}
+
+.movieDetail .topSection .poster+div {
+	padding: 30px 50px;
+}
+
+.movieDetail .topSection .texth2 {
+	padding-bottom: 10px;
+}
+
+.movieDetail .topSection span:first-child {
+	font-weight: bold;
+}
+
+.movieDetail .topSection span:not(:first-child):not(:last-child):after {
+	content: ', ';
+}
+
+
+.movieDetail .topSection .content>div:first-child{
+	margin-bottom: 30px;
+}
+
+.bottomSection {
+	margin-top: 50px;
+}
+
+
+.bottomSection .credits {
+	padding: 20px 10px;
+}
+
+.bottomSection .thumb {
+	display: flex;
+	margin: 10px 0;
+}
+
+.bottomSection .thumb:hover {
+	color: #1A9DBA;
+}
+
+.bottomSection .thumb>div:nth-of-type(2) {
+	padding: 15px;
+}
+
+.bottomSection .icon {
+	width: 66px;
+	height: 66px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.bottomSection .icon:hover {
+	box-shadow: 0 0 0 5px #1A9DBA;
+	cursor: pointer;
+}
+
+.bottomSection .credits {
+	display: flex;
+}
+
+.bottomSection .bigIcon {
+	padding-top: 40px;
+	width: 347px;
+	height: 420px;
+	object-fit: cover;
+}
+
+.bottomSection .credits>div:nth-of-type(2) {
+	padding-left: 100px;
 }
